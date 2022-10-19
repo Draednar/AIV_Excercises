@@ -7,7 +7,7 @@ LDA #0
 STA $0200, X
 RTS
 
-Input:       ;get input 
+Input:       ;get input and branch to movement functions
 LDA $4000
 CMP #$01
 BEQ Up
@@ -44,12 +44,12 @@ JSR clear
 INX
 RTS
 
-Draw:
+Draw:         ;draw pixel
 LDA #09
 STA $0200, X
 RTS
 
-Main:
+Main:         ;update
 JSR Input
 JSR Draw
 JMP Main
