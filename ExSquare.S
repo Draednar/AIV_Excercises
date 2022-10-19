@@ -2,7 +2,7 @@ org $8000
 
 LDX #$00     ;start position
 
-Clear:       ;clear screen
+Clear:       ;clear screen of previous pixel
 LDA #0
 STA $0200, X
 RTS
